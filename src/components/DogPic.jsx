@@ -23,7 +23,6 @@ const DogPic = () => {
       <div>
         <img src={pic.message}></img>
         <button onClick={handleClick}>New dog picture</button>
-        <h1>Process.env.PUBLIC_URL: {process.env.NODE_ENV}</h1>
       </div>
     </>
   );
