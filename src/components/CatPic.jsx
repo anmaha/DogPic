@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const DogPic = () => {
+const CatPic = () => {
   const [pic, setPic] = useState([]);
 
   const helperFunction = async () => {
-    const response = await axios.get("https://dog.ceo/api/breeds/image/random");
+    const response = await axios.get("https://api.thecatapi.com/v1/images/search");
     const data = response.data;
     setPic(data);
   };
@@ -23,10 +23,10 @@ const DogPic = () => {
       <div>
         
         <img src={pic.message}></img>
-        <button onClick={handleClick}>New dog picture</button>
+        <button onClick={handleClick}>New cat picture</button>
       </div>
     </>
   );
 };
 
-export default DogPic;
+export default CatPic;
